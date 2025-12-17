@@ -20,6 +20,45 @@ con flujos administrativos internos y sin documentación funcional formal.
 - Registro de hallazgos a partir de evidencia observable.
 - Uso de datos anonimizados y ejemplos ficticios.
 
+- ## Workflow aplicado en el análisis (versión pública)
+
+El siguiente workflow describe el enfoque general utilizado durante el proceso
+de testing y auditoría del sistema.  
+Se presenta como un **modelo de trabajo aplicado**, independientemente del grado
+de avance del análisis, y no implica cobertura exhaustiva de todas las
+funcionalidades del sistema.
+
+### 1. Reconocimiento del sistema
+Exploración inicial del sistema a partir de la navegación directa, sin
+suposiciones previas ni documentación funcional formal.
+Identificación de módulos visibles, acciones disponibles y flujos aparentes.
+
+### 2. Identificación del flujo feliz mínimo
+Ejecución del recorrido básico esperado por el sistema para una acción principal
+(alta, carga o búsqueda), utilizando datos controlados o ficticios.
+Observación de validaciones, mensajes y estados resultantes.
+
+### 3. Exploración de flujos alternativos
+Pruebas fuera del recorrido esperado: cargas incompletas, datos no normalizados,
+repetición de acciones y navegación no lineal.
+Detección de estados ambiguos o comportamientos no comunicados al usuario.
+
+### 4. Observación transversal de usabilidad y accesibilidad
+Análisis de feedback visual, mensajes de error, persistencia de estado y
+comprensión de la interfaz.
+Identificación de barreras de uso y accesibilidad desde una perspectiva de
+usuario no experto y uso real del sistema.
+
+### 5. Registro y tipificación de hallazgos
+Documentación de los problemas observados de forma abstracta y anoniminizada,
+priorizando patrones, impacto operativo y riesgos potenciales por sobre
+incidencias aisladas.
+
+### 6. Delimitación del alcance
+Definición explícita de los aspectos analizados y de aquellos que quedaron fuera
+del alcance del presente caso de estudio.
+
+
 ## Hallazgos generales (resumen)
 - Falta de mensajes de confirmación en acciones críticas.
 - Validaciones insuficientes para cargas con datos reales.
